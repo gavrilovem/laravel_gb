@@ -70,13 +70,13 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Category $category
-     * @param int $id
+     * @param Category $categoryModel
+     * @param int $category
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function edit(Category $category, int $id)
+    public function edit(Category $categoryModel, int $category)
     {
-        return view('admin/news/categories/edit', ['category' => $category->getCategory($id)]);
+        return view('admin/news/categories/edit', ['category' => $categoryModel->getCategory($category)]);
     }
 
     /**
